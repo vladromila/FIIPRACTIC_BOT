@@ -48,7 +48,8 @@ client.on("messageCreate", async message => {
     const command = message.content.trim();
     if (message.channelId == '946865824906510416') {
         console.log(`https://fiicode-api.asii.ro/teams/code/${command}`);
-        let team = await axios.get(`https://fiicode-api.asii.ro/teams/code/${command}`).catch(() => {
+        let team = await axios.get(`https://fiicode-api.asii.ro/teams/code/${command}`).catch((e) => {
+            console.log(e);
             return {}
         })
 
