@@ -44,15 +44,15 @@ client.on("messageCreate", async message => {
     // })
 
     if (message.author.bot) return;
-    message.guild.roles.cache.forEach(role => {
-        console.log(role.name, role.id);
-    })
+
     const command = message.content.trim();
     if (message.channelId == '946865824906510416') {
 
-        let team = await axios.get(`http://localhost:3000/teams/${command}`).catch(() => {
+        let team = await axios.get(`https://fiicode-api.asii.ro/teams/code/${command}`).catch(() => {
             return {}
         })
+
+
 
         console.log(team.data);
 
