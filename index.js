@@ -1,5 +1,5 @@
 const { default: axios } = require('axios');
-const { Client, Intents, Team } = require('discord.js');
+const { Client,   Intents, Team } = require('discord.js');
 const client = new Client({
     intents: [
         Intents.FLAGS.GUILDS,
